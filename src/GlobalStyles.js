@@ -42,7 +42,12 @@ body{
 overflow-x: hidden;
 height:100%;
 width:100%;
-color:var(--black)
+color:var(--black);
+-ms-overflow-style: none; /* Internet Explorer 10+ */
+scrollbar-width: none; /* Firefox */
+&::-webkit-scrollbar {
+ display: none;
+}
 }
 img{
     max-width: 100%;

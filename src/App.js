@@ -1,4 +1,12 @@
 import "./App.css";
+import { ThemeProvider } from "styled-components";
+import { MainStyled } from "./MainStyled";
+import CustomRoute from "./Components/CustomSwitch/CustomSwitch";
+import Home from "./Pages/Home/Home";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import Input from "./Pages/Input/Input";
+import { Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
 const theme = {
   colors: {
     header: "#ebfbff",
@@ -35,7 +43,18 @@ const theme = {
   img: "1201px",
 };
 function App() {
-  return <div className="App"></div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Navbar />
+      <MainStyled>
+        <CustomRoute>
+          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Input />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </CustomRoute>
+      </MainStyled>
+    </ThemeProvider>
+  );
 }
 
 export default App;
