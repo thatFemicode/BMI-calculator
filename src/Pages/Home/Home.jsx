@@ -7,6 +7,7 @@ import bell from "../../img/dumbell.jpg";
 const Home = () => {
   return (
     <HomeStyled>
+      <div className="circle"></div>
       <OuterLayout>
         <div className="home">
           <div className="home-left">
@@ -14,19 +15,14 @@ const Home = () => {
             <img className="bell" src={bell} alt="" />
           </div>
           <div className="home-right">
-            <div className="square-animation-wrapper">
-              <div className="square1"></div>
-              <div className="square2"></div>
-              <div className="square3"></div>
-              <div className="square4"></div>
-              <div className="square5"></div>
-              <div className="square6"></div>
-              <div className="square7"></div>
-              <div className="square8"></div>
+            <div className="home-right-heading">
+              <h1>
+                BMI <br /> <span className="calc">Calculator</span>
+              </h1>
             </div>
-            <h1>
-              BMI <br /> <span className="calc">Calculator</span>
-            </h1>
+            <div className="home-right-content">
+              <p>Wondering what your total body mass is, Look no more </p>
+            </div>
           </div>
         </div>
       </OuterLayout>
