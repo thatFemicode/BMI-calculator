@@ -17,7 +17,7 @@ export const NavbarStyled = styled.nav`
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
