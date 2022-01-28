@@ -49,7 +49,7 @@ function App() {
       <MainStyled>
         <CustomRoute>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Input />} />
+          <Route path="/input" element={<Input />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </CustomRoute>
       </MainStyled>

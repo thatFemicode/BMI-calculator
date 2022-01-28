@@ -11,6 +11,11 @@ const ButtonStyled = styled.button`
   background-color: #b7e2ef;
   cursor: pointer;
   margin-top: 1rem;
+  @media (max-width: ${({ theme }) => theme.make}) {
+    /* max-width: 400px; */
+    font-size: 0.7rem;
+    padding: 0.15rem 0.55rem;
+  }
 `;
 const PrimaryButton = ({ name }) => {
   return (

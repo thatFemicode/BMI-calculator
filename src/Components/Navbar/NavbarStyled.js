@@ -28,6 +28,9 @@ export const NavbarStyled = styled.nav`
       @media (max-width: ${({ theme }) => theme.images}) {
         width: 55px;
       }
+      @media (max-width: ${({ theme }) => theme.make}) {
+        width: 45px;
+      }
       @media screen and (min-height: 100px) and (max-height: 600px) and (max-width: 1024px) {
         width: 65px;
       }

@@ -9,8 +9,8 @@ export const HomeStyled = styled.main`
   /* display: flex; */
   @media (max-width: ${({ theme }) => theme.make}) {
     padding-top: 2rem;
-    /* height: 100vh;
-    overflow: hidden; */
+    height: 100vh;
+    overflow: hidden;
   }
   .circle {
     position: absolute;
@@ -30,18 +30,24 @@ export const HomeStyled = styled.main`
     }
     @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
       clip-path: circle(900px at right 1000px);
-
-      bottom: -610px;
+      bottom: -630px;
     }
+
     @media (max-width: ${({ theme }) => theme.desktop}) {
       bottom: -200px;
+    }
+    @media screen and (min-height: 100px) and (max-height: 1024px) and (max-width: 768px) {
+      bottom: -530px;
     }
     @media (max-width: ${({ theme }) => theme.images}) {
       bottom: -250px;
     }
     @media (max-width: ${({ theme }) => theme.make}) {
-      bottom: -100px;
-      clip-path: circle(750px at left 1150px);
+      bottom: -43px;
+      clip-path: circle(650px at left 1020px);
+    }
+    @media (max-width: ${({ theme }) => theme.mobil}) {
+      /* display: none; */
     }
     /* @media screen and (min-height: 400px) and (max-height: 600px) {
       clip-path: circle(600px at left 1000px);
@@ -74,6 +80,12 @@ export const HomeStyled = styled.main`
         @media (max-width: ${({ theme }) => theme.make}) {
           width: 130px;
         }
+        @media (max-width: ${({ theme }) => theme.mobil}) {
+          width: 150px;
+        }
+        @media (max-width: ${({ theme }) => theme.foot}) {
+          width: 120px;
+        }
       }
       .bell {
         position: absolute;
@@ -86,10 +98,14 @@ export const HomeStyled = styled.main`
         @media (max-width: ${({ theme }) => theme.make}) {
           width: 50px;
         }
+        @media (max-width: ${({ theme }) => theme.mobil}) {
+          bottom: 15px;
+        }
         /* mix-blend-mode: darken; */
       }
     }
     &-right {
+      width: 100%;
       flex: 70%;
       padding-top: 4rem;
       padding-left: 4rem;
@@ -107,14 +123,13 @@ export const HomeStyled = styled.main`
           font-size: 2.8rem;
         }
         @media (max-width: ${({ theme }) => theme.make}) {
-          font-size: 2rem;
-          /* height: 100vh;
-    overflow: hidden; */
+          font-size: 1.8rem;
         }
         .calc {
           color: #000;
         }
       }
+
       .main-text {
         max-width: 450px;
         line-height: 1.8;
@@ -130,7 +145,8 @@ export const HomeStyled = styled.main`
           font-size: 0.775rem;
         }
         @media (max-width: ${({ theme }) => theme.make}) {
-          max-width: 400px;
+          max-width: 350px;
+          font-size: 0.68rem;
         }
       }
       &-card {
