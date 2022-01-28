@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const InputComponentStyled = styled.div``;
-const Container = styled.div`
+export const Container = styled.div`
+  margin-top: 6rem;
   font-family: "Arial";
   display: flex;
   align-items: center;
@@ -14,7 +15,7 @@ const Container = styled.div`
   }
 `;
 
-const TextInput = styled.input`
+export const TextInput = styled.input`
   flex: 1 0;
   min-width: 50px;
   min-height: 25px;
@@ -25,4 +26,7 @@ const TextInput = styled.input`
   &:focus {
     outline: none;
   }
+`;
+export const Icon = styled.div`
+  flex: 0 0;
 `;
