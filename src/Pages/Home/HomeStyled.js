@@ -40,7 +40,7 @@ export const HomeStyled = styled.main`
       bottom: -250px;
     }
     @media (max-width: ${({ theme }) => theme.make}) {
-      bottom: 0;
+      bottom: -100px;
       clip-path: circle(750px at left 1150px);
     }
     /* @media screen and (min-height: 400px) and (max-height: 600px) {
@@ -93,7 +93,9 @@ export const HomeStyled = styled.main`
       flex: 70%;
       padding-top: 4rem;
       padding-left: 4rem;
-
+      @media (max-width: ${({ theme }) => theme.make}) {
+        padding: 4rem 2rem 0 2rem;
+      }
       .heading {
         color: #b7e2ef;
         /* color: #ff6700; */
@@ -103,6 +105,11 @@ export const HomeStyled = styled.main`
         }
         @media (max-width: ${({ theme }) => theme.desktop}) {
           font-size: 2.8rem;
+        }
+        @media (max-width: ${({ theme }) => theme.make}) {
+          font-size: 2rem;
+          /* height: 100vh;
+    overflow: hidden; */
         }
         .calc {
           color: #000;
@@ -121,6 +128,9 @@ export const HomeStyled = styled.main`
         }
         @media (max-width: ${({ theme }) => theme.desktop}) {
           font-size: 0.775rem;
+        }
+        @media (max-width: ${({ theme }) => theme.make}) {
+          max-width: 400px;
         }
       }
       &-card {
