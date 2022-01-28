@@ -7,9 +7,14 @@ export const HomeStyled = styled.main`
   position: relative;
   /* background: linear-gradient(90deg, #fff 80%, #b7e2ef 20%); */
   /* display: flex; */
+  @media (max-width: ${({ theme }) => theme.make}) {
+    padding-top: 2rem;
+    /* height: 100vh;
+    overflow: hidden; */
+  }
   .circle {
     position: absolute;
-    bottom: -30px;
+    bottom: -80px;
     right: 0px;
     width: 100%;
     height: 500px;
@@ -23,11 +28,20 @@ export const HomeStyled = styled.main`
       clip-path: circle(900px at right 1200px);
       bottom: -150px;
     }
+    @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+      clip-path: circle(900px at right 1000px);
+
+      bottom: -610px;
+    }
     @media (max-width: ${({ theme }) => theme.desktop}) {
       bottom: -200px;
     }
     @media (max-width: ${({ theme }) => theme.images}) {
       bottom: -250px;
+    }
+    @media (max-width: ${({ theme }) => theme.make}) {
+      bottom: 0;
+      clip-path: circle(750px at left 1150px);
     }
     /* @media screen and (min-height: 400px) and (max-height: 600px) {
       clip-path: circle(600px at left 1000px);
@@ -36,6 +50,12 @@ export const HomeStyled = styled.main`
   .home {
     display: flex;
     padding: 0 5rem;
+    @media (max-width: ${({ theme }) => theme.make}) {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
     &-left {
       /* position: relative; */
       flex: 30%;
@@ -51,6 +71,9 @@ export const HomeStyled = styled.main`
         @media (max-width: ${({ theme }) => theme.images}) {
           width: 180px;
         }
+        @media (max-width: ${({ theme }) => theme.make}) {
+          width: 130px;
+        }
       }
       .bell {
         position: absolute;
@@ -59,6 +82,9 @@ export const HomeStyled = styled.main`
         bottom: 0;
         @media (max-width: ${({ theme }) => theme.dont}) {
           max-width: 70px;
+        }
+        @media (max-width: ${({ theme }) => theme.make}) {
+          width: 50px;
         }
         /* mix-blend-mode: darken; */
       }
