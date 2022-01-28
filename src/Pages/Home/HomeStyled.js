@@ -14,7 +14,7 @@ export const HomeStyled = styled.main`
   }
   .circle {
     position: absolute;
-    bottom: -80px;
+    bottom: -60px;
     right: 0px;
     width: 100%;
     height: 500px;
@@ -61,7 +61,7 @@ export const HomeStyled = styled.main`
       flex: 30%;
       .human {
         position: relative;
-        max-width: 270px;
+        max-width: 260px;
         @media (max-width: ${({ theme }) => theme.dont}) {
           width: 220px;
         }
