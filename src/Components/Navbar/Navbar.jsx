@@ -18,7 +18,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hashtag">
-            <Link to="dashboard">DashBoard</Link>
+            <Link to="/input">Get Started</Link>
           </div>
         </div>
       </OuterLayout>
