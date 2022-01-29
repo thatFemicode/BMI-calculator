@@ -6,9 +6,9 @@ export const InputStyled = styled.main`
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, #fff 60%, #b7e2ef 40%);
+  background: linear-gradient(90deg, #fff 60%, #f6f8fb 40%);
   @media (max-width: ${({ theme }) => theme.post}) {
-    background: linear-gradient(90deg, #fff 50%, #b7e2ef 50%);
+    background: linear-gradient(90deg, #fff 50%, #f6f8fb 50%);
   }
 
   @media (max-width: ${({ theme }) => theme.make}) {
@@ -18,7 +18,7 @@ export const InputStyled = styled.main`
   }
   @media (max-width: ${({ theme }) => theme.mobil}) {
     align-items: unset;
-    background: linear-gradient(180deg, #fff 80%, #b7e2ef 20%);
+    background: linear-gradient(180deg, #fff 80%, #f6f8fb 20%);
   }
   .input {
     width: 100%;

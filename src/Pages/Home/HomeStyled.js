@@ -19,7 +19,8 @@ export const HomeStyled = styled.main`
     width: 100%;
     height: 500px;
     z-index: -1;
-    background-color: #b7e2ef;
+    /* background-color: #b7e2ef; */
+    background-color: #f6f8fb;
     clip-path: circle(900px at right 1150px);
     @media (max-width: ${({ theme }) => theme.mind}) {
       clip-path: circle(900px at right 1200px);

@@ -13,6 +13,7 @@ const InputComponent = ({ name, setName }) => {
         required
         type="text"
         value={name}
+        placeholder="Type in your name"
         onChange={(event) => {
           setName(event.target.value);
         }}
