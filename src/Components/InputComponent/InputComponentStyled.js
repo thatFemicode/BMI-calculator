@@ -10,7 +10,11 @@ export const Container = styled.div`
   /* padding-left: 2rem; */
   border: 1px solid;
   border-radius: 5px;
-  width: 260px;
+  width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.images}) {
+    width: 80%;
+  }
 `;
 
 export const TextInput = styled.input`

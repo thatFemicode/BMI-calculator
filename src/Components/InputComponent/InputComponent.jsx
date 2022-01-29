@@ -10,6 +10,7 @@ const InputComponent = ({ name, setName }) => {
   return (
     <Container>
       <TextInput
+        required
         type="text"
         value={name}
         onChange={(event) => {

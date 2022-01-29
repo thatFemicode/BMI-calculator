@@ -3,7 +3,7 @@ import { InputStyled } from "./InputStyled";
 import { OuterLayout } from "../../Layout/Layout";
 import InputComponent from "../../Components/InputComponent/InputComponent";
 import over from "../../img/over.png";
-import { useNavigate } from "react-router";
+import { useNavigate, useHistory } from "react-router-dom";
 import Card from "../../Components/Card/Card";
 import data from "./data";
 
@@ -11,10 +11,15 @@ const Input = () => {
   const [name, setName] = useState("");
   // const [data, setData] = useState(datas);
   const navigate = useNavigate();
+  // let history = useHistory();
   // const [user] = useState(JSON.parse(localStorage.getItem("name")));
   const onSubmit = () => {
     localStorage.setItem("name", JSON.stringify(name));
     navigate("/dashboard");
+    if (name === "") {
+      alert("you need to input a name");
+      navigate("/input");
+    }
   };
   // console.log(user);
   return (
