@@ -5,10 +5,11 @@ import InputComponent from "../../Components/InputComponent/InputComponent";
 import over from "../../img/over.png";
 const Input = () => {
   const [name, setName] = useState("");
-
+  // const [user] = useState(JSON.parse(localStorage.getItem("name")));
   const onSubmit = () => {
     localStorage.setItem("name", JSON.stringify(name));
   };
+  // console.log(user);
   return (
     <InputStyled>
       <OuterLayout>

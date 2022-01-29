@@ -23,6 +23,7 @@ const InputComponent = ({ name, setName }) => {
           stroke="black"
           onClick={() => {
             setName("");
+            localStorage.clear();
           }}
         />
       </Icon>
