@@ -9,7 +9,7 @@ export const DashboardStyled = styled.main`
   background: linear-gradient(90deg, #f6f8fb 50%, #fff 50%);
   .dashboard {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     height: 100%;
     &-left {
@@ -130,6 +130,9 @@ export const DashboardStyled = styled.main`
     &-right {
       height: 100%;
       flex: 2;
+      img {
+        width: 200px;
+      }
     }
   }
 `;

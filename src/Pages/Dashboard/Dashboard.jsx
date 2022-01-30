@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { OuterLayout } from "../../Layout/Layout";
 import { DashboardStyled } from "./DashboardStyled";
-
+import overweight from "../../img/over.png";
+import healthy from "../../img/fit.png";
+import underweight from "../../img/under.png";
 const Dashboard = () => {
+  const [weight, setWeight] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [bmi, setBmi] = useState("");
+  const [message, setMessage] = useState("");
+  let [img, setImg] = useState();
   return (
     <DashboardStyled>
       <OuterLayout>
@@ -39,7 +46,9 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="dashboard-right"></div>
+          <div className="dashboard-right">
+            <img src={overweight} alt="" />
+          </div>
         </div>
       </OuterLayout>
     </DashboardStyled>
