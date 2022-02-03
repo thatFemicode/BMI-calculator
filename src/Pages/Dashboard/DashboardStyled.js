@@ -7,11 +7,19 @@ export const DashboardStyled = styled.main`
   position: relative;
   overflow: hidden;
   background: linear-gradient(90deg, #f6f8fb 50%, #fff 50%);
+  @media (max-width: ${({ theme }) => theme.images}) {
+    background: linear-gradient(180deg, #f6f8fb 50%, #fff 50%);
+  }
   .dashboard {
     display: flex;
     /* align-items: center; */
     justify-content: center;
     height: 100%;
+    @media (max-width: ${({ theme }) => theme.images}) {
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+    }
     &-left {
       flex: 3;
       height: 100%;
@@ -129,9 +137,26 @@ export const DashboardStyled = styled.main`
     }
     &-right {
       height: 100%;
-      flex: 2;
-      img {
-        width: 200px;
+      flex: 3;
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      /* @media (max-width: ${({ theme }) => theme.make}) {
+        flex: unset;
+        align-self: center;
+      } */
+      .right {
+        img {
+          width: 250px;
+          @media (max-width: ${({ theme }) => theme.images}) {
+            width: 120px;
+          }
+        }
+      }
+      .left {
+        p {
+          text-transform: capitalize;
+        }
       }
     }
   }
