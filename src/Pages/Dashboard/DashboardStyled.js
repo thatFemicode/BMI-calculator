@@ -8,11 +8,11 @@ export const DashboardStyled = styled.main`
   overflow: hidden;
   background: linear-gradient(90deg, #f6f8fb 50%, #fff 50%);
   @media (max-width: ${({ theme }) => theme.images}) {
-    background: linear-gradient(180deg, #f6f8fb 50%, #fff 50%);
+    background: linear-gradient(180deg, #f6f8fb 60%, #fff 40%);
   }
   .dashboard {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     height: 100%;
     @media (max-width: ${({ theme }) => theme.images}) {
@@ -21,8 +21,10 @@ export const DashboardStyled = styled.main`
       justify-content: center;
     }
     &-left {
+      align-self: flex-start;
       flex: 3;
       height: 100%;
+      width: 100%;
       .auth {
         /* height: 100%; */
         &-form-container-fields {
@@ -37,7 +39,7 @@ export const DashboardStyled = styled.main`
           @media screen and (max-width: 800px) {
             justify-content: flex-start;
           }
-          @media screen and (max-width: 375px) {
+          @media screen and (max-width: 415px) {
             padding: 2rem 0.5rem;
           }
           @media (max-width: ${({ theme }) => theme.mind}) {
@@ -136,26 +138,52 @@ export const DashboardStyled = styled.main`
       }
     }
     &-right {
+      /* width: 100%; */
       height: 100%;
       flex: 3;
       display: flex;
       align-items: center;
-      /* justify-content: center; */
-      /* @media (max-width: ${({ theme }) => theme.make}) {
+      /* padding-left: 2.3rem;
+      padding-right: 2.3rem; */
+      padding: 2.3rem;
+      padding-top: 1rem; /* justify-content: center; */ /* @media (max-width: ${({
+        theme,
+      }) => theme.make}) {
         flex: unset;
         align-self: center;
       } */
       .right {
         img {
-          width: 250px;
+          width: 270px;
           @media (max-width: ${({ theme }) => theme.images}) {
             width: 120px;
+          }
+          @media (max-width: ${({ theme }) => theme.max}) {
+            width: 150px;
           }
         }
       }
       .left {
+        /* align-self: flex-end;
+        margin-bottom: 2rem; */
+
+        /* text-align: justify; */
+        h3 {
+          font-size: 1.7rem;
+          @media (max-width: ${({ theme }) => theme.dont}) {
+            font-size: 1.4rem;
+          }
+          @media (max-width: ${({ theme }) => theme.make}) {
+            font-size: 1rem;
+          }
+        }
         p {
           text-transform: capitalize;
+          font-size: 1rem;
+          line-height: 1.6;
+          @media (max-width: ${({ theme }) => theme.make}) {
+            font-size: 0.9rem;
+          }
         }
       }
     }

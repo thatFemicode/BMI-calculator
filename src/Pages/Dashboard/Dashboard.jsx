@@ -33,15 +33,15 @@ const Dashboard = () => {
         setImg(null);
       } else if (bmi < 18) {
         setText(`Your Bmi is ${bmi.toFixed(1)}`);
-        setMessage(`${user}, You are underweight`);
+        setMessage(`${user}, you are underweight, please eat more ☹`);
         setImg(underweight);
       } else if (bmi >= 19 && bmi < 25) {
         setText(`Your Bmi is ${bmi.toFixed(1)}`);
-        setMessage(`${user}, you are a healthy weight`);
+        setMessage(`${user}, damn you are a healthy weight 😎🚀`);
         setImg(healthy);
       } else {
         setText(`Your Bmi is ${bmi.toFixed(1)}`);
-        setMessage(`${user}, You are overweight`);
+        setMessage(`${user}, Sheesh ☹ you are overweight`);
         setImg(overweight);
       }
     }
