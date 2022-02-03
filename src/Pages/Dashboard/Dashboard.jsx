@@ -13,7 +13,8 @@ const Dashboard = () => {
   const [message, setMessage] = useState("");
   let [img, setImg] = useState();
   const [user] = useState(JSON.parse(localStorage.getItem("name")));
-  const image = useRef(null);
+  let image = useRef(null);
+  let tl = gsap.timeline();
   let calcBmi = (event) => {
     //prevent submitting
     event.preventDefault();
@@ -40,7 +41,14 @@ const Dashboard = () => {
       }
     }
   };
-  useEffect(() => {});
+  useEffect(() => {
+    tl.from(image, {
+      duration: 2,
+      opacity: 0,
+      y: 200,
+      ease: "power3.inOut",
+    });
+  }, [img]);
   return (
     <DashboardStyled>
       <OuterLayout>
@@ -82,7 +90,7 @@ const Dashboard = () => {
           <div className="dashboard-right">
             <h3>Your BMI is: {bmi}</h3>
             <p>{message}</p>
-            <img src={img} alt="" />
+            <img ref={(el) => (image = el)} src={img} alt="" />
           </div>
         </div>
       </OuterLayout>
