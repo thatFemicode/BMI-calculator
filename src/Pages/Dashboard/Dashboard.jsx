@@ -82,6 +82,9 @@ const Dashboard = () => {
             <div className="auth-form-container-fields">
               <div className="auth-form-container-fields-content">
                 <p>Calculator</p>
+                <p className="text">
+                  Input weight and height in the text field below
+                </p>
                 <form onSubmit={calcBmi}>
                   <div className="auth-form-container-fields-content-input">
                     <label htmlFor="phoneNumber">Weight (Kg):</label>

@@ -10,6 +10,15 @@ export const DashboardStyled = styled.main`
   @media (max-width: ${({ theme }) => theme.images}) {
     background: linear-gradient(180deg, #f6f8fb 60%, #fff 40%);
   }
+  @media screen and (min-height: 100px) and (max-height: 896px) and (max-width: 415px) {
+    background: linear-gradient(180deg, #f6f8fb 50%, #fff 50%);
+  }
+  @media screen and (min-height: 100px) and (max-height: 736px) and (max-width: 415px) {
+    background: linear-gradient(180deg, #f6f8fb 60%, #fff 40%);
+  }
+  @media screen and (min-height: 100px) and (max-height: 667px) and (max-width: 375px) {
+    background: linear-gradient(180deg, #f6f8fb 60%, #fff 40%);
+  }
   .dashboard {
     display: flex;
     align-items: center;
@@ -61,6 +70,9 @@ export const DashboardStyled = styled.main`
             p {
               font-size: 1.5rem;
               font-weight: 900;
+            }
+            .text {
+              font-size: 1rem;
             }
             &-input {
               display: flex;
@@ -160,6 +172,15 @@ export const DashboardStyled = styled.main`
           }
           @media (max-width: ${({ theme }) => theme.max}) {
             width: 150px;
+          }
+          @media screen and (min-height: 100px) and (max-height: 896px) and (max-width: 415px) {
+            width: 190px;
+          }
+          @media screen and (min-height: 100px) and (max-height: 736px) and (max-width: 415px) {
+            width: 150px;
+          }
+          @media screen and (min-height: 100px) and (max-height: 667px) and (max-width: 375px) {
+            width: 140px;
           }
         }
       }
