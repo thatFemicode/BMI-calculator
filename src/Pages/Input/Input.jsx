@@ -3,10 +3,9 @@ import { InputStyled } from "./InputStyled";
 import { OuterLayout } from "../../Layout/Layout";
 import InputComponent from "../../Components/InputComponent/InputComponent";
 import over from "../../img/over.png";
-import { useNavigate, useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Card from "../../Components/Card/Card";
 import data from "./data";
-
 const Input = () => {
   const [name, setName] = useState("");
   // const [data, setData] = useState(datas);
