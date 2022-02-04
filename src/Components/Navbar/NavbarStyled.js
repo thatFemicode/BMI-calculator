@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarStyled = styled.nav`
+  /* opacity: 0; */
   position: absolute;
   top: 0;
   left: 0;

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = forwardRef(({ children }, ref) => {
   return (
-    <NavbarStyled ref={ref} className="Headd">
+    <NavbarStyled ref={ref} className="Headds">
       <OuterLayout>
         <div className="navigation">
           <div className="logo">

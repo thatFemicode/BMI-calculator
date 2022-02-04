@@ -124,6 +124,15 @@ li{
     color: rgba(255, 255, 255, var(--tw-text-opacity));
     background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 } */
+.load-screen1 {
+  position: relative;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #000;
+  width: 100%;
+  height: 0%;
+}
 .load-container {
   position: fixed;
   top: 0;
@@ -131,7 +140,7 @@ li{
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: 10;
+  z-index: 13;
   pointer-events: none;
 }
 .load-screen {
@@ -146,6 +155,9 @@ li{
 .Headd {
   opacity: 0;
   pointer-events: none;
+}
+.Headds {
+  opacity: 1;
 }
 `;
 export default GlobalStyle;

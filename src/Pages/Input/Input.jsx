@@ -24,38 +24,35 @@ const Input = forwardRef(({ children }, ref) => {
   const tl = gsap.timeline();
   useEffect(() => {
     tl.to(screen, {
-      duration: 0.8,
-      width: "100%",
-      left: "0%",
+      duration: 1.2,
+      height: "100%",
       ease: Power3.easeInOut,
     })
       .to(screen, {
-        duration: 1,
-        left: "100%",
+        duration: 1.2,
+        top: "100%",
         ease: Power3.easeInOut,
         delay: 0.3,
       })
-      .set(screen, { left: "-100%" });
-    gsap
-      .from(ref.current, 0.3, {
+      .set(screen, { left: "-100%" })
+      .from(ref.current, {
+        duration: 0.3,
         opacity: 0,
         pointerEvents: "auto",
         ease: Power4.easeInOut,
       })
-      .delay(1);
-    gsap
-      .to(body, 0.3, {
+      .to(body, {
+        duration: 0.3,
         opacity: "1",
         pointerEvents: "auto",
         ease: Power4.easeInOut,
-      })
-      .delay(2);
+      });
   }, []);
 
   return (
     <>
       <div className="load-container">
-        <div className="load-screen" ref={(el) => (screen = el)}></div>
+        <div className="load-screen1" ref={(el) => (screen = el)}></div>
       </div>
       <InputStyled ref={(el) => (body = el)} className="Headd">
         <OuterLayout>
