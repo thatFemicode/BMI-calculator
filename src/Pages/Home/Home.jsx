@@ -7,7 +7,7 @@ import bell from "../../img/dumbell.jpg";
 import data from "./data";
 import Card from "../../Components/Card/Card";
 import PrimaryButton from "../../Components/Button/PrimaryButton";
-import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
+import { TweenMax, TimelineMax, Power3, Power4, gsap } from "gsap";
 const Home = forwardRef(({ children }, ref) => {
   let screen = useRef(null);
   let body = useRef(null);
@@ -19,19 +19,21 @@ const Home = forwardRef(({ children }, ref) => {
       width: "100%",
       left: "0%",
       ease: Power3.easeInOut,
-    });
-    tl.to(screen, {
-      duration: 1,
-      left: "100%",
-      ease: Power3.easeInOut,
-      delay: 0.3,
-    });
-    tl.set(screen, { left: "-100%" });
-    TweenMax.to(ref.current, 0.3, {
-      opacity: "1",
-      pointerEvents: "auto",
-      ease: Power4.easeInOut,
-    }).delay(1);
+    })
+      .to(screen, {
+        duration: 1,
+        left: "100%",
+        ease: Power3.easeInOut,
+        delay: 0.3,
+      })
+      .set(screen, { left: "-100%" });
+    gsap
+      .from(ref.current, 0.3, {
+        opacity: 0,
+        pointerEvents: "auto",
+        ease: Power4.easeInOut,
+      })
+      .delay(1);
     TweenMax.to(body, 0.3, {
       css: {
         opacity: "1",

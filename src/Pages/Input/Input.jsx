@@ -35,27 +35,21 @@ const Input = forwardRef(({ children }, ref) => {
         ease: Power3.easeInOut,
         delay: 0.3,
       })
-      .set(screen, { left: "-100%" })
+      .set(screen, { left: "-100%" });
+    gsap
       .from(ref.current, 0.3, {
         opacity: 0,
         pointerEvents: "auto",
         ease: Power4.easeInOut,
       })
-      .delay(1)
+      .delay(1);
+    gsap
       .to(body, 0.3, {
         opacity: "1",
         pointerEvents: "auto",
         ease: Power4.easeInOut,
       })
       .delay(2);
-    // return () => {
-    //   tl.to(body, 1, {
-    //     css: {
-    //       opacity: "0",
-    //       pointerEvents: "none",
-    //     },
-    //   });
-    // };
   }, []);
 
   return (
@@ -63,11 +57,7 @@ const Input = forwardRef(({ children }, ref) => {
       <div className="load-container">
         <div className="load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <InputStyled
-        data-barba="container"
-        ref={(el) => (body = el)}
-        className="Headd"
-      >
+      <InputStyled ref={(el) => (body = el)} className="Headd">
         <OuterLayout>
           <div className="input">
             <div className="input-left">
