@@ -118,7 +118,7 @@ export const InputStyled = styled.main`
         /* transform: scale3d(1, 1, 1); */
         /* transition: background 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s,
           transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s; */
-        z-index: 21;
+        z-index: 4;
         @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
           top: 25%;
         }

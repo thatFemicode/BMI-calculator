@@ -48,8 +48,11 @@ export const DashboardStyled = styled.main`
           @media screen and (max-width: 800px) {
             justify-content: flex-start;
           }
+          @media (max-width: ${({ theme }) => theme.images}) {
+            padding: 0.8rem;
+          }
           @media screen and (max-width: 415px) {
-            padding: 2rem 0.5rem;
+            padding: 0.7rem 0.5rem;
           }
           @media (max-width: ${({ theme }) => theme.mind}) {
             flex: 4;
@@ -73,6 +76,9 @@ export const DashboardStyled = styled.main`
             }
             .text {
               font-size: 1rem;
+              @media (max-width: ${({ theme }) => theme.make}) {
+                font-size: 0.8rem;
+              }
             }
             &-input {
               display: flex;
@@ -166,21 +172,24 @@ export const DashboardStyled = styled.main`
       } */
       .right {
         img {
-          width: 270px;
+          max-width: 270px;
+          @media (max-width: ${({ theme }) => theme.dont}) {
+            max-width: 200px;
+          }
           @media (max-width: ${({ theme }) => theme.images}) {
-            width: 120px;
+            max-width: 105px;
           }
-          @media (max-width: ${({ theme }) => theme.max}) {
-            width: 150px;
-          }
+          /* @media (max-width: ${({ theme }) => theme.max}) {
+            max-width: 150px;
+          } */
           @media screen and (min-height: 100px) and (max-height: 896px) and (max-width: 415px) {
-            width: 190px;
+            max-width: 125px;
           }
           @media screen and (min-height: 100px) and (max-height: 736px) and (max-width: 415px) {
-            width: 150px;
+            max-width: 105px;
           }
           @media screen and (min-height: 100px) and (max-height: 667px) and (max-width: 375px) {
-            width: 140px;
+            max-width: 90px;
           }
         }
       }

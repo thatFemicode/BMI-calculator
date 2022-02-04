@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { NavbarStyled } from "./NavbarStyled";
 import { OuterLayout } from "../../Layout/Layout";
 // import logo from "./img/GSW.svg";
@@ -7,9 +7,9 @@ import logo from "./img/slack.svg";
 import { Link } from "react-router-dom";
 // import { useGlobalContext } from "../../Context/context.js";
 
-const Navbar = () => {
+const Navbar = forwardRef(({ children }, ref) => {
   return (
-    <NavbarStyled>
+    <NavbarStyled ref={ref} className="Headd">
       <OuterLayout>
         <div className="navigation">
           <div className="logo">
@@ -24,6 +24,6 @@ const Navbar = () => {
       </OuterLayout>
     </NavbarStyled>
   );
-};
+});
 
 export default Navbar;

@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import { ThemeProvider } from "styled-components";
 import { MainStyled } from "./MainStyled";
 import CustomRoute from "./Components/CustomSwitch/CustomSwitch";
@@ -7,6 +7,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Input from "./Pages/Input/Input";
 import { Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
+import { useEffect, useRef } from "react";
 const theme = {
   colors: {
     header: "#ebfbff",
@@ -43,14 +44,15 @@ const theme = {
   img: "1201px",
 };
 function App() {
+  let nav = useRef(null);
   return (
     <ThemeProvider theme={theme}>
-      <Navbar />
+      <Navbar ref={nav} />
       <MainStyled>
         <CustomRoute>
-          <Route path="/" element={<Home />} />
-          <Route path="/input" element={<Input />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Home ref={nav} />} />
+          <Route path="/input" element={<Input ref={nav} />} />
+          <Route path="/dashboard" element={<Dashboard ref={nav} />} />
         </CustomRoute>
       </MainStyled>
     </ThemeProvider>

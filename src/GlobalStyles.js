@@ -139,7 +139,7 @@ li{
   padding-top: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: #1d428a;
+  background-color: #f6f8fb;
   width: 0%;
   height: 100%;
 }
