@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const InputComponentStyled = styled.div``;
 export const Container = styled.div`
-  margin-top: 6rem;
+  margin-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   width: 100%;
 
   @media (max-width: ${({ theme }) => theme.images}) {
-    width: 80%;
+    width: 100%;
   }
 `;
 

@@ -5,9 +5,9 @@ import InputComponent from "../../Components/InputComponent/InputComponent";
 import over from "../../img/over.png";
 import { useNavigate } from "react-router-dom";
 import { Power3, Power4, gsap } from "gsap";
-
-import Card from "../../Components/Card/Card";
-import data from "./data";
+import under from "../../img/under.png";
+// import Card from "../../Components/Card/Card";
+// import data from "./data";
 const Input = forwardRef(({ children }, ref) => {
   let screen = useRef(null);
   let body = useRef(null);
@@ -58,14 +58,13 @@ const Input = forwardRef(({ children }, ref) => {
         <OuterLayout>
           <div className="input">
             <div className="input-left">
-              <img src={over} alt="" />
-              <div className="input-left-card">
-                {/* <Card item={data} /> */}
+              <img src={under} alt="" />
+              {/* <div className="input-left-card">
                 {data.map((item, _) => {
                   const { id } = item;
                   return <Card key={id} item={item} />;
                 })}
-              </div>
+              </div> */}
             </div>
             <div className="input-right">
               <h1>Input name below</h1>

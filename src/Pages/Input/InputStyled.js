@@ -34,44 +34,50 @@ export const InputStyled = styled.main`
     }
     &-left {
       width: 100%;
+      height: 100%;
       position: relative;
       flex: 70%;
       display: flex;
       @media (max-width: ${({ theme }) => theme.images}) {
         flex: unset;
+        width: 50%;
       }
       @media (max-width: ${({ theme }) => theme.make}) {
-        width: 300px;
+        /* width: 300px; */
+      }
+      @media (max-width: ${({ theme }) => theme.max}) {
+        flex: unset;
+        width: 100%;
       }
       @media (max-width: ${({ theme }) => theme.mobil}) {
         justify-content: flex-end;
-        margin-left: 10rem;
-        margin-top: 5rem;
       }
-      @media (max-width: ${({ theme }) => theme.foot}) {
-        margin-left: 9rem;
+      /* @media (max-width: ${({ theme }) => theme.foot}) {
+        margin-left: 4rem;
         margin-top: 4rem;
-      }
+      } */
 
       img {
-        max-width: 290px;
+        width: 290px;
+        height: 100%;
         @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
-          max-width: 500px;
+          width: 350px;
         }
         @media (max-width: ${({ theme }) => theme.desktop}) {
-          max-width: 290px;
+          width: 290px;
         }
         @media (max-width: ${({ theme }) => theme.images}) {
-          max-width: 230px;
+          width: 230px;
         }
         @media (max-width: ${({ theme }) => theme.make}) {
-          max-width: 210px;
+          width: 210px;
         }
         @media (max-width: ${({ theme }) => theme.mobil}) {
-          max-width: 130px;
+          width: 130px;
+          margin-top: 3rem;
         }
         @media (max-width: ${({ theme }) => theme.foot}) {
-          max-width: 120px;
+          width: 110px;
         }
       }
       &-card {
@@ -89,6 +95,9 @@ export const InputStyled = styled.main`
         @media (max-width: ${({ theme }) => theme.images}) {
           left: -70px;
         }
+        @media (max-width: ${({ theme }) => theme.max}) {
+          left: -50px;
+        }
       }
     }
     &-right {
@@ -98,13 +107,15 @@ export const InputStyled = styled.main`
       flex: 30%;
       @media (max-width: ${({ theme }) => theme.images}) {
         flex: unset;
+        width: 50%;
+        padding-left: 2rem;
       }
-      /* @media (max-width: ${({ theme }) => theme.images}) {
-        margin-right: 4rem;
-      } */
-      /* padding-left: 5rem; */
-      h1 {
+      @media (max-width: ${({ theme }) => theme.max}) {
+        flex: unset;
+        width: 100%;
+        padding-left: 0;
       }
+
       button {
         cursor: pointer;
         /* background: rgb(225, 225, 225); */
@@ -120,16 +131,21 @@ export const InputStyled = styled.main`
           transform 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s; */
         z-index: 4;
         @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
-          top: 25%;
+          top: 35%;
         }
         @media screen and (min-height: 900px) and (max-height: 1024px) and (max-width: 768px) {
           top: 40%;
         }
-        @media (max-width: ${({ theme }) => theme.images}) {
+        /* @media (max-width: ${({ theme }) => theme.images}) {
           top: 50%;
-        }
+      
+        } */
         @media (max-width: ${({ theme }) => theme.images}) {
           top: 60%;
+          left: 30px;
+        }
+        @media (max-width: ${({ theme }) => theme.max}) {
+          left: 0px;
         }
         @media (max-width: ${({ theme }) => theme.mobil}) {
           top: 125%;
