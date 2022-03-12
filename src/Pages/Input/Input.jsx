@@ -2,7 +2,7 @@ import React, { useState, useEffect, forwardRef, useRef } from "react";
 import { InputStyled } from "./InputStyled";
 import { OuterLayout } from "../../Layout/Layout";
 import InputComponent from "../../Components/InputComponent/InputComponent";
-import over from "../../img/over.png";
+// import over from "../../img/over.png";
 import { useNavigate } from "react-router-dom";
 import { Power3, Power4, gsap } from "gsap";
 import under from "../../img/under.png";
@@ -21,8 +21,9 @@ const Input = forwardRef(({ children }, ref) => {
       navigate("/input");
     }
   };
-  const tl = gsap.timeline();
+
   useEffect(() => {
+    const tl = gsap.timeline();
     tl.to(screen, {
       duration: 1.2,
       height: "100%",
