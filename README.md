@@ -19,7 +19,7 @@ This project was created with [Create React App](https://github.com/facebook/cre
 
 ## Home Mobile View
 
-<img src="img/home.png" alt="Design preview for home page">
+<img src="img/homemobile.png" alt="Design preview for home page">
 ## Available Scripts
 
 ## Username Input Page Desktop View
@@ -32,7 +32,7 @@ This project was created with [Create React App](https://github.com/facebook/cre
 
 ## Dashboard Page Mobile View
 
-<img src="img/userdashmobile.png.png" alt="Design preview for home page">
+<img src="img/userdashmobile.png" alt="Design preview for home page">
 
 In the project directory, you can run:
 
