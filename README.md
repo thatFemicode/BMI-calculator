@@ -1,6 +1,6 @@
 # BMI Calculator
 
-Body mass Index calculator built to calculate BMI of a user, has three pages, home page, username input page and the dashboard page where user calculates their BMI
+Body mass Index calculator built to calculate BMI of a user, has three pages, home page, username input page and the calculator page where user calculates their BMI
 
 ## LiveURL:
 
@@ -26,11 +26,11 @@ This project was created with [Create React App](https://github.com/facebook/cre
 
 <img src="img/inputuser.png" alt="Design preview for home page">
 
-## Dashboard Page Desktop View
+## Calculator Page Desktop View
 
 <img src="img/userdash.png" alt="Design preview for home page">
 
-## Dashboard Page Mobile View
+## Calculator Page Mobile View
 
 <img src="img/userdashmobile.png" alt="Design preview for home page">
 
